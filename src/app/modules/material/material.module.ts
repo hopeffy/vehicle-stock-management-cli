@@ -1,67 +1,68 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { VehicleCreateDialogComponent } from './components/vehicle/vehicle-create-dialog/vehicle-create-dialog/vehicle-create-dialog.component';
-import { VehicleDeleteDialogComponent } from './components/vehicle/vehicle-delete-dialog/vehicle-delete-dialog/vehicle-delete-dialog.component';
-import { VehicleUpdateDialogComponent } from './components/vehicle/vehicle-update-dialog/vehicle-update-dialog/vehicle-update-dialog.component';
-import { VehicleComponent } from './pages/vehicle/vehicle/vehicle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCommonModule, MatNativeDateModule, MatRippleModule } from '@angular/material/core';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatTableModule } from '@angular/material/table';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatCommonModule } from '@angular/material/core';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
+
 import { MatExpansionModule } from '@angular/material/expansion';
+
+import { FormControl } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+
 import { MatGridListModule } from '@angular/material/grid-list';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+
 import { MatListModule } from '@angular/material/list';
+
 import { MatMenuModule } from '@angular/material/menu';
+
+import { NgForm } from '@angular/forms';
+
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatRippleModule } from '@angular/material/core';
+
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 import { MatStepperModule } from '@angular/material/stepper';
+
+import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    VehicleCreateDialogComponent,
-    VehicleDeleteDialogComponent,
-    VehicleUpdateDialogComponent,
-    VehicleComponent
-  ],
+  declarations: [],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatInputModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    BrowserModule,
+    CommonModule
+  ],
+  exports: [
+    CommonModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -75,16 +76,20 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatDividerModule,
     MatExpansionModule,
+    FormControl,
     MatFormFieldModule,
+    FormsModule,
     MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
     MatMenuModule,
+    NgForm,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatRadioModule,
+    ReactiveFormsModule,
     MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
@@ -98,15 +103,6 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    HttpClientModule
-  ],
-  providers: [
-    provideClientHydration(),
-    {
-      provide: MatDialogRef,
-      useValue: {}
-    },
-  ],
-  bootstrap: [AppComponent]
+  ]
 })
-export class AppModule { }
+export class MaterialModule { }
