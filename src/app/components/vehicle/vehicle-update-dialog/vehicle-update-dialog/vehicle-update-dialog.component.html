@@ -1,1 +1,50 @@
-<p>vehicle-update-dialog works!</p>
+<h1 mat-dialog-title>Edit Details</h1>
+
+<div mat-dialog-content>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Plaka</mat-label>
+            <input matInput type="text" [(ngModel)]="inputdata.plaka" ngDefaultControl required />
+        </mat-form-field>
+    </div>
+
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Model Year</mat-label>
+            <input matInput type="text" [(ngModel)]="inputdata.modelYear" ngDefaultControl required />
+        </mat-form-field>
+    </div>
+
+    <div class="row ">
+        <mat-form-field>
+            <mat-label>Inspection Date</mat-label>
+            <input [(ngModel)]="inputdata.inspectionDate" matInput [matDatepicker]="picker2" [value]="currentDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        
+        <div class="custom-file d-flex justify-content-center align-items-center">
+            <img src="" style="width: 70px; height: 70px;">
+            <input type="file" accept="image/*" class="custom-file-input" id="customFile" multiple
+              (change)="handleFileInput($event)" [disabled]="working">
+              
+          </div>
+          <div *ngFor="let fileName of FileLabel">
+            <label class="custom-file-label" for="customFile">{{ fileName }}</label>
+          </div>
+          
+    </div>
+
+    <mat-divider></mat-divider>
+    <div mat-dialog-actions class="button">
+        <button mat-flat-button mat-dialog-close>Close</button>
+        <button mat-flat-button color="primary" ngbTooltip="Upload" (click)="setPopUpData()">
+            Save
+        </button>
+
+
+    </div>
+</div>
