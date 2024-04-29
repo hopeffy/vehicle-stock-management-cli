@@ -14,7 +14,7 @@ export class VehicleService {
   ) { }
 
   createVehicle(model : Partial<Vehicle>) : Observable<Vehicle> {
-    debugger
+
     return this.http.post<Vehicle>(`${this.baseUrl}`, model);
   }
 

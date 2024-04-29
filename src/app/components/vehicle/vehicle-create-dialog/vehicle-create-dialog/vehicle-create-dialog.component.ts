@@ -46,7 +46,7 @@ export class VehicleCreateDialogComponent {
   // events: string[] = [];
 
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-    debugger
+
     // this.events.push(`${type}: ${event.value}`);
     this.vehicle.inspectionDate = event.value!;
   }
@@ -56,7 +56,7 @@ return this.formControl.hasError('') ? 'Geçerli bir plaka girin' : '';
 }
 
   createVehicle(){
-      debugger
+
       this.vehicleService.createVehicle(this.vehicle).subscribe({
         next: (response) => {
           // console.log(response);
@@ -72,7 +72,7 @@ return this.formControl.hasError('') ? 'Geçerli bir plaka girin' : '';
   }
 
   handleFileInput(event:any) {
-    debugger
+
     
     var file = event.target.files[0];
     const formData : FormData = new FormData();

@@ -89,7 +89,7 @@ export class VehicleUpdateDialogComponent implements OnInit {
   }
 
   handleFileInput(event:any) {
-    debugger
+
     var file = event.target.files[0];
     var vehicle : Vehicle = this.addVehicleForm?.value as Vehicle;
     
